@@ -3,9 +3,10 @@ import unittest
 import os
 import xlrd
 import time
-import copy
 from config import readConfig
-from api.app import shoppingCart,login
+from api.student import login
+from api.webOrder import shoppingCart
+
 
 class PlaceOrder(unittest.TestCase):
     def setUp(self):
@@ -15,7 +16,7 @@ class PlaceOrder(unittest.TestCase):
         conf = readConfig.ReadConfig().get_conf()
         phone = conf["phone"]
         psw = conf["password_test"]
-        resp = login.loginByPassword(phone,psw)
+        resp = login.loginByPassword(phone, psw)
         self.uToken = resp["AppendData"][0]["LoginToken"]
         self.studentCode = resp["AppendData"][0]["Code"]
 
@@ -39,7 +40,7 @@ class PlaceOrder(unittest.TestCase):
         time.sleep(1)
 
         '''查看选课单'''
-        cart_resp = shoppingCart.shoppingCartList(self.uToken,self.studentCode)
+        cart_resp = shoppingCart.shoppingCartList(self.uToken, self.studentCode)
         time.sleep(1)
 
         '''清空选课单内有效课程，防止课程重复添加'''
@@ -48,7 +49,7 @@ class PlaceOrder(unittest.TestCase):
             rmList.append(classes["Items"][0]["Code"])
         for classes in cart_resp["AppendData"]["InvalidItems"]:
             rmList.append(classes["Code"])
-        shoppingCart.removeShoppingCart(self.uToken,self.studentCode,rmList)
+        shoppingCart.removeShoppingCart(self.uToken, self.studentCode, rmList)
         time.sleep(1)
 
         '''将课程添加至选课单'''
@@ -64,15 +65,15 @@ class PlaceOrder(unittest.TestCase):
         calc_items = []
         for classes in cart_resp["AppendData"]["Items"]:
             for details in classes["Items"]:
-                i = {}
-                i["ClassCode"] = details["Code"]
+
                 for parts in details["Items"]:
+                    i = {}
+                    i["ClassCode"] = details["Code"]
                     i["StartLessonNo"] = parts["StartLessonNo"]
                     i["LessonNum"] = parts["LessonNum"]
-                    new_i = copy.deepcopy(i)
-                    calc_items.append(new_i)
+                    calc_items.append(i)
                     print(str(calc_items))
-        shoppingCart.calcPrice(self.uToken,calc_items,self.studentCode) #不使用优惠券
+        shoppingCart.calcPrice(self.uToken, calc_items, self.studentCode) #不使用优惠券
 
 
 

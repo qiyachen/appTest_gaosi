@@ -5,6 +5,21 @@ import requests
 from common import commonFuns
 
 conf =  readConfig.ReadConfig().get_conf()
+semester ={
+                0:"",
+                1:"秋季班",
+                2:"寒假班",
+                3:"春季班",
+                4:"暑假班"
+            }
+level = {
+            0:"青铜",
+            1:"白银",
+            2:"黄金",
+            3:"铂金",
+            4:"黑金",
+            5:"钻石"
+        }
 
 def addShoppingCart(uToken,studentCode,classCodes,isPromoted):
     '''
@@ -112,7 +127,37 @@ def calcPrice(uToken,items,studentCode,choosedCoupon = False,selectedCouponIds =
     except AssertionError:
         print("计算价格失败，错误类型:" + str(r["ResultType"]) + ",错误信息:" + r["Message"])
     else:
-        print("计算价格成功:" + str(r["AppendData"]))
+        print("计算价格成功:")
+
+        for class_iterator in  r["AppendData"]["Items"]:
+            sem = semester[class_iterator["Semester"]]
+            print("课程信息：")
+            print(class_iterator["ClassName"]+" "+class_iterator["ClassCode"])
+            for part_iterator in class_iterator["Items"]:
+                print("     "+sem+part_iterator["Section"]+": ￥"+str(round(part_iterator["Price"])))
+            if class_iterator["ManageFee"] != 0.0:
+                print("管理费：￥" + str(class_iterator["ManageFee"]))
+            if class_iterator["Deposit"] != 0.0:
+                print("押金：￥"+ str(class_iterator["Deposit"]))
+            if class_iterator["Coupons"] !=[]:
+                print("优惠明细："+class_iterator["Coupons"])
+        print("结算明细：")
+        print("课程总数："+ str(r["AppendData"]["ClassNum"])+"个")
+        print("课程费用：￥"+ str(round(r["AppendData"]["TotalPrice"])))
+        if r["AppendData"]["TotalDeposit"] != 0.0:
+            print("总押金￥："+ str(r["AppendData"]["TotalDeposit"]))
+        if r["AppendData"]["TotalManageFee"] != 0.0:
+            print("总管理费：￥" + str(r["AppendData"]["TotalManageFee"]))
+        if not r["AppendData"]["MemberCoupons"] is None:
+            print(r["AppendData"]["MemberCoupons"]["CouponPolicy"]+":￥"+str(round(r["AppendData"]["MemberCoupons"]["Amount"])))
+            for items_iterator in r["AppendData"]["MemberCoupons"]["Items"]:
+                print("     "+items_iterator["CouponPolicyName"]+":￥"+str(round(items_iterator["Amount"])))
+        if not r["AppendData"]["CDAndSysCoupons"] is None:
+            print(r["AppendData"]["CDAndSysCoupons"]["CouponPolicy"]+":￥"+str(round(r["AppendData"]["CDAndSysCoupons"]["Amount"])))
+            for items_iterator in r["AppendData"]["CDAndSysCoupons"]["Items"]:
+                print("     " + items_iterator["CouponPolicyName"] + ":￥" + str(round(items_iterator["Amount"])))
+        print("优惠券："+r["AppendData"]["CouponUsedStatus"]["Tips"]+":￥"+str(round(r["AppendData"]["CouponUsedStatus"]["Amount"])))
+        print("合计：￥" + str(round(r["AppendData"]["AmountPayable"])))
         return r
 
 def shoppingCartList(uToken,studentCode):
@@ -143,13 +188,6 @@ def shoppingCartList(uToken,studentCode):
     else:
         print("选课单获取成功：")
         for classes in r["AppendData"]["Items"]:
-            semester ={
-                0:"",
-                1:"秋季班",
-                2:"寒假班",
-                3:"春季班",
-                4:"暑假班"
-            }
             sem = semester[classes["Items"][0]["Semester"]]
             print("有效课程" +": "+str(classes["Items"][0]["Name"])+" "+str(classes["Items"][0]["Code"]))
             for parts in classes["Items"][0]["Items"]:
@@ -158,9 +196,9 @@ def shoppingCartList(uToken,studentCode):
                 else:
                     price = str(round(parts["Price"]))
                 if parts["StartLessonNo"] == parts["EndLessonNo"]:
-                    print(sem +"-"+ parts["Section"]+":"+"第"+str(parts["StartLessonNo"])+"次课")
+                    print("     "+sem +"-"+ parts["Section"]+":"+"第"+str(parts["StartLessonNo"])+"次课")
                 else:
-                    print(sem +"-"+ parts["Section"]+":"+
+                    print("     "+sem +"-"+ parts["Section"]+":"+
                           "第" +str(parts["StartLessonNo"]) + "-"+ str(parts["EndLessonNo"]) +"次课:￥"+price )
         for classes in r["AppendData"]["InvalidItems"]:
             print("失效课程" + ": " + str(classes["Name"]) + " " + str(classes["Code"]))

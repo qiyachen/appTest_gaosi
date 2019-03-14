@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c0baba9-bed5-4f52-aa42-b564ed8c6fed" name="Default Changelist" comment="" />
+    <list default="true" id="3c0baba9-bed5-4f52-aa42-b564ed8c6fed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api/student/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/webOrder/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/appTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/appTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/student/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/student/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/shoppingCart.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/webOrder/shoppingCart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/verificationCode.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/student/verificationCode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testCase/test_placeOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCase/test_placeOrder.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/app/shoppingCart.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/webOrder/shoppingCart.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2420">
-              <caret line="114" column="19" selection-start-line="114" selection-start-column="19" selection-end-line="114" selection-end-column="19" />
+            <state relative-caret-position="22">
+              <caret line="145" column="66" selection-start-line="145" selection-start-column="66" selection-end-line="145" selection-end-column="66" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -22,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testCase/test_placeOrder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="58" column="71" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
+            <state relative-caret-position="183">
+              <caret line="72" column="55" selection-start-line="72" selection-start-column="55" selection-end-line="72" selection-end-column="55" />
               <folding>
                 <element signature="e#24#39#0" expanded="true" />
               </folding>
@@ -35,9 +46,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/app/verificationCode.py">
+        <entry file="file://$PROJECT_DIR$/api/student/verificationCode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="-37">
               <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -49,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/requests/api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1298">
+            <state relative-caret-position="447">
               <caret line="59" selection-start-line="59" selection-end-line="59" />
             </state>
           </provider>
@@ -75,6 +86,9 @@
     <dirStrings>
       <dir>C:\Users\Administrator\PycharmProjects\TestDemo</dir>
     </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -126,23 +140,74 @@
         <option value="$PROJECT_DIR$/testCase/test_getVerificationCode.py" />
         <option value="$PROJECT_DIR$/api/app/login.py" />
         <option value="$PROJECT_DIR$/common/commonFuns.py" />
-        <option value="$PROJECT_DIR$/api/app/shoppingCart.py" />
-        <option value="$PROJECT_DIR$/testCase/test_placeOrder.py" />
         <option value="$PROJECT_DIR$/api/app/demo.py" />
+        <option value="$PROJECT_DIR$/testCase/test_placeOrder.py" />
+        <option value="$PROJECT_DIR$/api/app/shoppingCart.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="39" />
+    <option name="y" value="51" />
     <option name="width" value="1227" />
-    <option name="height" value="493" />
+    <option name="height" value="627" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appTest_gaosi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appTest_gaosi" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appTest_gaosi" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appTest_gaosi" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="webOrder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appTest_gaosi" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appTest_gaosi" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appTest_gaosi" type="462c0819:PsiDirectoryNode" />
+              <item name="testCase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appTest_gaosi" type="462c0819:PsiDirectoryNode" />
+              <item name="testFile" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -154,57 +219,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appTest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appTest" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appTest" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appTest" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appTest" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appTest" type="462c0819:PsiDirectoryNode" />
-              <item name="testCase" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appTest" type="462c0819:PsiDirectoryNode" />
-              <item name="testFile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="appTest" type="462c0819:PsiDirectoryNode" />
-              <item name="testResult" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="E:/gaosiedu/appTest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -287,7 +305,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/app/login.py" />
+      <option name="SCRIPT_NAME" value="D:\appTest_gaosi\api\student\login.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -329,7 +347,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/app/shoppingCart.py" />
+      <option name="SCRIPT_NAME" value="D:\appTest_gaosi\api\webOrder\shoppingCart.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -376,34 +394,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.13 at 18h 33m 48s.xml">
+    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.14 at 16h 40m 02s.xml">
       <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.13 at 18h 34m 58s.xml">
+    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.14 at 16h 40m 48s.xml">
       <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.13 at 18h 37m 36s.xml">
+    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.14 at 16h 42m 26s.xml">
       <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.13 at 18h 38m 37s.xml">
+    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.14 at 17h 40m 02s.xml">
       <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.13 at 18h 39m 23s.xml">
+    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.14 at 17h 45m 46s.xml">
       <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.13 at 18h 40m 54s.xml">
+    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.14 at 17h 47m 22s.xml">
       <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.14 at 08h 55m 29s.xml">
+    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.14 at 17h 48m 52s.xml">
       <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.14 at 08h 56m 17s.xml">
+    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.14 at 17h 49m 53s.xml">
       <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.14 at 08h 56m 58s.xml">
+    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.14 at 17h 58m 25s.xml">
       <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.14 at 09h 00m 46s.xml">
+    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.14 at 17h 58m 47s.xml">
       <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -418,14 +436,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25105783" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32839838" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49858958" weight="0.5141319" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32614556" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49858958" weight="0.16576819" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -546,7 +563,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/login.py">
+    <entry file="file://$PROJECT_DIR$/api/student/login.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-349">
           <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
@@ -563,19 +580,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/shoppingCart.py">
+    <entry file="file://$PROJECT_DIR$/api/app/demo.py" />
+    <entry file="file://$PROJECT_DIR$/testCase/test_placeOrder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2420">
-          <caret line="114" column="19" selection-start-line="114" selection-start-column="19" selection-end-line="114" selection-end-column="19" />
+        <state relative-caret-position="183">
+          <caret line="72" column="55" selection-start-line="72" selection-start-column="55" selection-end-line="72" selection-end-column="55" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#24#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/verificationCode.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/requests/api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="447">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/student/verificationCode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -583,26 +608,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/requests/api.py">
+    <entry file="file://$PROJECT_DIR$/api/webOrder/shoppingCart.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1298">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" selection-start-column="38" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testCase/test_placeOrder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="58" column="71" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
+        <state relative-caret-position="22">
+          <caret line="145" column="66" selection-start-line="145" selection-start-column="66" selection-end-line="145" selection-end-column="66" />
           <folding>
-            <element signature="e#24#39#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>

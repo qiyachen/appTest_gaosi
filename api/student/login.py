@@ -1,7 +1,6 @@
 from config import readConfig
-from api.app import verificationCode
+from api.student import verificationCode
 import json
-import hashlib
 import requests
 from common import commonFuns
 
