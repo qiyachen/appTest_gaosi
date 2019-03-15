@@ -30,10 +30,3 @@ def set_conf(conf):
     :return:
     """
 
-def reset_conf(conf):
-    """
-    配置文件读取,重置其值
-    :return:
-    """
-if __name__ == '__main__':
-    get_conf()

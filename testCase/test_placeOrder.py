@@ -4,18 +4,16 @@ import os
 import xlrd
 import time
 
-import api.webOrder.price
 from config import configAction
-from api.student import login
-from api.webOrder import shoppingCart
-
+from api.student import login,accountBalance
+from api.webOrder import shoppingCart,price
 
 class PlaceOrder(unittest.TestCase):
     def setUp(self):
         '''初始化数据'''
         print("-初始化-")
 
-        '''获得utoken/student_code'''
+        '''获得token和学生编号'''
         conf = configAction.get_conf()
         phone = conf["phone"]
         psw = conf["password_test"]
@@ -23,7 +21,7 @@ class PlaceOrder(unittest.TestCase):
         self.uToken = resp["AppendData"][0]["LoginToken"]
         self.studentCode = resp["AppendData"][0]["Code"]
 
-        '''获得class_codes'''
+        '''获得班级编号'''
         file_path = os.path.join(os.path.abspath('..').split('src')[0] + "/testFile/placeOrder.xlsx")
         workbook = xlrd.open_workbook(file_path)
         table = workbook.sheet_by_index(0)
@@ -33,6 +31,11 @@ class PlaceOrder(unittest.TestCase):
         for i in range(rows):
             self.classCodes.append(table.cell(i, 0).value)
         time.sleep(1)
+
+        '''获得高思币和余额'''
+        balance_resp = accountBalance.accountBalance(self.uToken, self.studentCode)
+        self.goldCoin = balance_resp["AppendData"]["GoldCoin"]
+        self.balance = balance_resp["AppendData"]["Balance"]
 
     def test_placeOrder(self):
         ''''
@@ -63,7 +66,6 @@ class PlaceOrder(unittest.TestCase):
         cart_resp = shoppingCart.shoppingCartList(self.uToken, self.studentCode)
         time.sleep(1)
 
-
         '''计算价格'''
         calc_items = []
         for classes in cart_resp["AppendData"]["Items"]:
@@ -75,10 +77,8 @@ class PlaceOrder(unittest.TestCase):
                     i["StartLessonNo"] = parts["StartLessonNo"]
                     i["LessonNum"] = parts["LessonNum"]
                     calc_items.append(i)
-                    print(str(calc_items))
-        api.webOrder.price.calcPrice(self.uToken, calc_items, self.studentCode) #不使用优惠券
+
+        price.calcPrice(self.uToken, calc_items, self.studentCode,self.goldCoin,self.balance) #自动选择优惠券
 
 
 
-if __name__ == '__main__':
-    PlaceOrder()

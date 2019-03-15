@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c0baba9-bed5-4f52-aa42-b564ed8c6fed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/sms/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/student/accountBalance.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/webOrder/price.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/commonEnum.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/configAction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/webOrder/order.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/student/accountBalance.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/student/accountBalance.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/student/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/student/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/student/verificationCode.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/sms/verificationCode.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/webOrder/shoppingCart.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/webOrder/shoppingCart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/commonFuns.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/commonAction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/webOrder/price.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/webOrder/price.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/commonAction.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/commonAction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/readConfig.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/configAction.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/configAction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testCase/test_placeOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCase/test_placeOrder.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,10 +21,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/student/accountBalance.py">
+        <entry file="file://$PROJECT_DIR$/api/webOrder/shoppingCart.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+            <state relative-caret-position="-1662">
+              <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -36,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/webOrder/price.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+            <state relative-caret-position="308">
+              <caret line="53" column="54" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="53" selection-end-column="54" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -46,10 +45,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/webOrder/order.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="549">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/student/accountBalance.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/student/login.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/commonAction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+            <state relative-caret-position="330">
+              <caret line="57" column="23" lean-forward="true" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -57,11 +86,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-430217226/builtins.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="2826" column="8" selection-start-line="2826" selection-start-column="8" selection-end-line="2826" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testCase/test_placeOrder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="83" column="16" lean-forward="true" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
+            <state relative-caret-position="197">
+              <caret line="80" column="8" lean-forward="true" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
               <folding>
                 <element signature="e#24#39#0" expanded="true" />
               </folding>
@@ -70,10 +108,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/commonEnum.py">
+        <entry file="file://$PROJECT_DIR$/config/config.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+            <state relative-caret-position="243">
+              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/sms/verificationCode.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="428">
+              <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,7 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/config.yml" />
         <option value="$PROJECT_DIR$/common/demo.py" />
         <option value="$PROJECT_DIR$/testCase/login.py" />
         <option value="$PROJECT_DIR$/testCase/sms/test_verificationCode.py" />
@@ -146,23 +195,24 @@
         <option value="$PROJECT_DIR$/config/readConfig.py" />
         <option value="$PROJECT_DIR$/config/rewriteConfig.py" />
         <option value="$PROJECT_DIR$/config/configFuns.py" />
-        <option value="$PROJECT_DIR$/testCase/test_placeOrder.py" />
-        <option value="$PROJECT_DIR$/config/configAction.py" />
-        <option value="$PROJECT_DIR$/common/commonAction.py" />
         <option value="$PROJECT_DIR$/common/commonEnum.py" />
-        <option value="$PROJECT_DIR$/api/student/login.py" />
         <option value="$PROJECT_DIR$/api/webOrder/shoppingCart.py" />
-        <option value="$PROJECT_DIR$/config/config.ini" />
-        <option value="$PROJECT_DIR$/config/config.ini" />
-        <option value="$PROJECT_DIR$/api/webOrder/price.py" />
         <option value="$PROJECT_DIR$/api/sms/verificationCode.py" />
+        <option value="$PROJECT_DIR$/config/configAction.py" />
+        <option value="$PROJECT_DIR$/api/student/login.py" />
         <option value="$PROJECT_DIR$/api/student/accountBalance.py" />
+        <option value="$PROJECT_DIR$/common/commonAction.py" />
+        <option value="$PROJECT_DIR$/api/webOrder/price.py" />
+        <option value="$PROJECT_DIR$/config/config.ini" />
+        <option value="$PROJECT_DIR$/config/config.ini" />
+        <option value="$PROJECT_DIR$/api/webOrder/order.py" />
+        <option value="$PROJECT_DIR$/testCase/test_placeOrder.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="39" />
-    <option name="y" value="51" />
+    <option name="x" value="77" />
+    <option name="y" value="89" />
     <option name="width" value="1227" />
     <option name="height" value="627" />
   </component>
@@ -243,7 +293,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -270,8 +320,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_placeOrder.py">
-    <configuration name="commonFuns" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python tests.Unittests for test_placeOrder.PlaceOrder.test_placeOrder">
+    <configuration name="accountBalance" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="appTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -279,11 +329,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/student" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\appTest_gaosi\common\commonAction.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/student/accountBalance.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -305,27 +355,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/config/configAction.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="login" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="appTest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\appTest_gaosi\api\student\login.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -376,6 +405,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for test_placeOrder.PlaceOrder.test_placeOrder" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="appTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testCase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_placeOrder.PlaceOrder.test_placeOrder&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests in test_placeOrder.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="appTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -392,11 +435,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for test_placeOrder.PlaceOrder.test_placeOrder" />
+        <item itemvalue="Python.accountBalance" />
         <item itemvalue="Python tests.Unittests in test_placeOrder.py" />
         <item itemvalue="Python.configAction" />
         <item itemvalue="Python.shoppingCart" />
-        <item itemvalue="Python.commonFuns" />
-        <item itemvalue="Python.login" />
       </list>
     </recent_temporary>
   </component>
@@ -418,39 +461,46 @@
       <option name="project" value="LOCAL" />
       <updated>1552557877112</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="19.03.15&#10;1.重构config 遍历配置文件中全部值&#10;2.新增commonEnum枚举&#10;3.新增price相关接口">
+      <created>1552628752561</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1552628752561</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.15 at 09h 38m 09s.xml">
-      <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_placeOrder_PlaceOrder_test_placeOrder - 2019.03.15 at 15h 53m 24s.xml">
+      <configuration name="Unittests for test_placeOrder.PlaceOrder.test_placeOrder" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.15 at 09h 38m 33s.xml">
-      <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_placeOrder_PlaceOrder_test_placeOrder - 2019.03.15 at 16h 05m 53s.xml">
+      <configuration name="Unittests for test_placeOrder.PlaceOrder.test_placeOrder" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.15 at 09h 40m 37s.xml">
-      <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_placeOrder_PlaceOrder_test_placeOrder - 2019.03.15 at 16h 19m 09s.xml">
+      <configuration name="Unittests for test_placeOrder.PlaceOrder.test_placeOrder" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.15 at 13h 13m 36s.xml">
-      <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_placeOrder_PlaceOrder_test_placeOrder - 2019.03.15 at 16h 20m 09s.xml">
+      <configuration name="Unittests for test_placeOrder.PlaceOrder.test_placeOrder" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.15 at 13h 14m 28s.xml">
-      <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_placeOrder_PlaceOrder_test_placeOrder - 2019.03.15 at 16h 26m 19s.xml">
+      <configuration name="Unittests for test_placeOrder.PlaceOrder.test_placeOrder" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.15 at 13h 16m 45s.xml">
-      <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_placeOrder_PlaceOrder_test_placeOrder - 2019.03.15 at 16h 26m 54s.xml">
+      <configuration name="Unittests for test_placeOrder.PlaceOrder.test_placeOrder" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.15 at 13h 18m 22s.xml">
-      <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_placeOrder_PlaceOrder_test_placeOrder - 2019.03.15 at 16h 27m 46s.xml">
+      <configuration name="Unittests for test_placeOrder.PlaceOrder.test_placeOrder" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.15 at 13h 19m 19s.xml">
-      <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_placeOrder_PlaceOrder_test_placeOrder - 2019.03.15 at 16h 29m 40s.xml">
+      <configuration name="Unittests for test_placeOrder.PlaceOrder.test_placeOrder" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.15 at 13h 20m 36s.xml">
-      <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_placeOrder_PlaceOrder_test_placeOrder - 2019.03.15 at 16h 31m 23s.xml">
+      <configuration name="Unittests for test_placeOrder.PlaceOrder.test_placeOrder" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_placeOrder_py - 2019.03.15 at 13h 23m 20s.xml">
-      <configuration name="Unittests in test_placeOrder.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_placeOrder_PlaceOrder_test_placeOrder - 2019.03.15 at 16h 32m 18s.xml">
+      <configuration name="Unittests for test_placeOrder.PlaceOrder.test_placeOrder" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -464,33 +514,52 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25105783" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32614556" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49858958" visible="true" weight="0.30592993" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49858958" visible="true" weight="0.45956874" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39892185" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32896653" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.21832883" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5014104" side_tool="true" weight="0.3001346" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25105783" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32614556" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49858958" visible="true" weight="0.45956874" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39892185" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32896653" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.21832883" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5014104" side_tool="true" weight="0.3001346" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新增计算课程费用接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增计算课程费用接口" />
+    <MESSAGE value="19.03.15&#10;1.重构config 遍历配置文件中全部值&#10;2.新增commonEnum枚举&#10;3.新增price相关接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="19.03.15&#10;1.重构config 遍历配置文件中全部值&#10;2.新增commonEnum枚举&#10;3.新增price相关接口" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testResult/2019-03-07-17_15_21Report.html" />
-    <entry file="file://$PROJECT_DIR$/testResult/2019-03-07-17_16_51Report.html" />
     <entry file="file://$PROJECT_DIR$/testResult/2019-03-07-17_30_14Report.html" />
     <entry file="file://$PROJECT_DIR$/testResult/2019-03-07-17_31_51Report.html" />
     <entry file="file://$PROJECT_DIR$/testResult/2019-03-07-17_33_16Report.html" />
@@ -592,80 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/webOrder/shoppingCart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1920">
-          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/configAction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/student/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-657">
-          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/sms/verificationCode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/student/accountBalance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/webOrder/price.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/commonAction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/commonEnum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -673,10 +668,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/configAction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-430217226/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="2826" column="8" selection-start-line="2826" selection-start-column="8" selection-end-line="2826" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/student/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/student/accountBalance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/sms/verificationCode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/webOrder/shoppingCart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1662">
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/commonAction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="57" column="23" lean-forward="true" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/webOrder/price.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="53" column="54" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="53" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/webOrder/order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testCase/test_placeOrder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="83" column="16" lean-forward="true" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
+        <state relative-caret-position="197">
+          <caret line="80" column="8" lean-forward="true" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
           <folding>
             <element signature="e#24#39#0" expanded="true" />
           </folding>

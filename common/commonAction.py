@@ -55,6 +55,7 @@ def getSign(uToken = None,params = None,data = None):
     '''4.把 s 进行 MD5 算法，得到签名sign'''
     sign = hashlib.md5(s.encode(encoding='UTF-8')).hexdigest()
 
-#    print("签名字符串为："+s)
+  #  print("签名字符串为："+s)
+  #  print(sign)
     return sign
 

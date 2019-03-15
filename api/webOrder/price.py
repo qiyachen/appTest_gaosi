@@ -7,7 +7,7 @@ from config import configAction
 conf = configAction.get_conf()
 semester = commonEnum.semester
 
-def calcPrice(uToken,items,studentCode,choosedCoupon = False,selectedCouponIds = None):
+def calcPrice(uToken,items,studentCode,goidCoin = None,balance = None,choosedCoupon = False,selectedCouponIds = None):
     '''
     计算报名指定班级的价格和享受的优惠，可以使用优惠劵
     :param uToken:token
@@ -48,9 +48,11 @@ def calcPrice(uToken,items,studentCode,choosedCoupon = False,selectedCouponIds =
         print("计算价格失败，错误类型:" + str(r["ResultType"]) + ",错误信息:" + r["Message"])
     else:
         print("计算价格成功:")
+        print("课程信息：")
+        print("-")
         for class_iterator in  r["AppendData"]["Items"]:
             sem = semester[class_iterator["Semester"]]
-            print("课程信息：")
+
             print(class_iterator["ClassName"]+" "+class_iterator["ClassCode"])
             for part_iterator in class_iterator["Items"]:
                 print("     "+sem+part_iterator["Section"]+": ￥"+str(round(part_iterator["Price"])))
@@ -59,7 +61,10 @@ def calcPrice(uToken,items,studentCode,choosedCoupon = False,selectedCouponIds =
             if class_iterator["Deposit"] != 0.0:
                 print("押金：￥"+ str(class_iterator["Deposit"]))
             if class_iterator["Coupons"] !=[]:
-                print("优惠明细："+class_iterator["Coupons"])
+                print("班级优惠明细：")
+                for coupon_iterator in class_iterator["Coupons"]:
+                    print("     "+coupon_iterator["CouponPolicyName"]+":￥"+str(round(coupon_iterator["Amount"])))
+            print("-")
         print("结算明细：")
         print("课程总数："+ str(r["AppendData"]["ClassNum"])+"个")
         print("课程费用：￥"+ str(round(r["AppendData"]["TotalPrice"])))
@@ -76,5 +81,10 @@ def calcPrice(uToken,items,studentCode,choosedCoupon = False,selectedCouponIds =
             for items_iterator in r["AppendData"]["CDAndSysCoupons"]["Items"]:
                 print("     " + items_iterator["CouponPolicyName"] + ":￥" + str(round(items_iterator["Amount"])))
         print("优惠券："+r["AppendData"]["CouponUsedStatus"]["Tips"]+":￥"+str(round(r["AppendData"]["CouponUsedStatus"]["Amount"])))
+        g = min(r["AppendData"]["MaxGoldCoinAmount"],goidCoin)
+        if goidCoin != 0.00:
+            print("高思币：共"+str(int(goidCoin))+"个,本次使用"+str(int(g)))
+        if balance != 0.00:
+            print("余额：￥"+str(balance))
         print("合计：￥" + str(round(r["AppendData"]["AmountPayable"])))
         return r

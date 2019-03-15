@@ -10,7 +10,6 @@ def loginByPassword(phone,password):
     '''密码登录'''
 
     '''初始化数据'''
-    print(str(conf))
     url = conf["domain_test"]+conf["login_by_password"]
 
     '''传参'''

@@ -16,18 +16,25 @@ def accountBalance(uToken,studentCode):
     url = conf["domain_test"] + conf["account_balance"]
 
     '''传参'''
-    p = {"StudentCode": studentCode}
-    sign = commonAction.getSign(uToken, params = p)
-    h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8"}
+    p = {"StudentCode":studentCode}
+    sign = commonAction.getSign(uToken, params=p)
+    h = {"sign": sign,"uToken":uToken, "partner": "10016"}
 
     '''发送请求'''
-    resp = requests.post(url=url, params=json.dumps(p), headers=h)
+    resp = requests.get(url=url, params= p, headers=h)
     r = resp.json()
 
     '''查询成功返回响应'''
+
     try:
         assert r["ResultType"] == 0
     except AssertionError:
         print("查询金库信息失败，错误类型:" + str(r["ResultType"]) + ",错误信息:" + r["Message"])
     else:
         return r
+
+if __name__ == '__main__':
+    a = {"StudentCode":"BJ213965"}
+    commonAction.getSign('d2abc64e24e74a158f283282197bf926',params=a)
+    commonAction.getSign('d2abc64e24e74a158f283282197bf926',data = a)
+    print("49aaff8b7b3727e41c1bd90507616dc1")
