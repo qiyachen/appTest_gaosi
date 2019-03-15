@@ -1,25 +1,10 @@
-from config import readConfig
+from config import configAction
 import json
-import hashlib
 import requests
-from common import commonFuns
+from common import commonAction,commonEnum
 
-conf =  readConfig.ReadConfig().get_conf()
-semester ={
-                0:"",
-                1:"秋季班",
-                2:"寒假班",
-                3:"春季班",
-                4:"暑假班"
-            }
-level = {
-            0:"青铜",
-            1:"白银",
-            2:"黄金",
-            3:"铂金",
-            4:"黑金",
-            5:"钻石"
-        }
+conf =  configAction.get_conf()
+semester = commonEnum.semester
 
 def addShoppingCart(uToken,studentCode,classCodes,isPromoted):
     '''
@@ -32,14 +17,14 @@ def addShoppingCart(uToken,studentCode,classCodes,isPromoted):
     '''
 
     '''初始化数据'''
-    url = conf["test_url"] + "/V3/WebOrder/AddShoppingCart"
+    url = conf["domain_test"] + conf["add_shopping_cart"]
 
     '''传参'''
     d = {"StudentCode": studentCode,
         "ClassCodes": classCodes,
         "IsPromoted": isPromoted
         }
-    sign = commonFuns.getSign(uToken,data = d)
+    sign = commonAction.getSign(uToken, data = d)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8", "uToken":uToken }
 
     '''发送请求'''
@@ -65,13 +50,13 @@ def removeShoppingCart(uToken,studentCode,classCodes):
     '''
 
     '''初始化数据'''
-    url = conf["test_url"]+ "/V3/WebOrder/RemoveShoppingCart"
+    url = conf["domain_test"] + conf["remove_shopping_cart"]
 
     '''传参'''
     d = {"StudentCode": studentCode,
         "ClassCodes": classCodes,
         }
-    sign = commonFuns.getSign(uToken,data = d)
+    sign = commonAction.getSign(uToken, data = d)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8", "uToken":uToken }
 
     '''发送请求'''
@@ -87,78 +72,6 @@ def removeShoppingCart(uToken,studentCode,classCodes):
         print(str(classCodes) + "已成功移除购物车")
         return r
 
-def calcPrice(uToken,items,studentCode,choosedCoupon = False,selectedCouponIds = None):
-    '''
-    计算报名指定班级的价格和享受的优惠，可以使用优惠劵
-    :param uToken:token
-    :param items: 班级信息
-    :param studentCode: 学生编码
-    :param choosedCoupon: 选择优惠券 默认未选择
-    :param selectedCouponIds:优惠券编码 选填项
-    :return: 响应数据
-    '''
-
-    '''初始化数据'''
-    url = conf["test_url"]+ "/V5/WebOrder/CalcPrice"
-
-    '''传参'''
-    d = {
-        "StudentCode": studentCode,
-        "Channel": 6,
-        "ChoosedCoupon": False,
-        "Items": items
-         }
-    if choosedCoupon == True and selectedCouponIds != None:
-        d["ChoosedCoupon"]= True
-        d["SelectedCouponIds"] = selectedCouponIds
-    elif choosedCoupon == True and selectedCouponIds != None:
-        print("计算价格参数有误！")
-
-    sign = commonFuns.getSign(uToken,data = d)
-    h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8", "uToken": uToken}
-
-    '''发送请求'''
-    resp = requests.post(url=url, data=json.dumps(d), headers=h)  # 计算优惠
-    r = resp.json()
-
-    '''计算后返回响应'''
-    try:
-        assert r["ResultType"] == 0
-    except AssertionError:
-        print("计算价格失败，错误类型:" + str(r["ResultType"]) + ",错误信息:" + r["Message"])
-    else:
-        print("计算价格成功:")
-
-        for class_iterator in  r["AppendData"]["Items"]:
-            sem = semester[class_iterator["Semester"]]
-            print("课程信息：")
-            print(class_iterator["ClassName"]+" "+class_iterator["ClassCode"])
-            for part_iterator in class_iterator["Items"]:
-                print("     "+sem+part_iterator["Section"]+": ￥"+str(round(part_iterator["Price"])))
-            if class_iterator["ManageFee"] != 0.0:
-                print("管理费：￥" + str(class_iterator["ManageFee"]))
-            if class_iterator["Deposit"] != 0.0:
-                print("押金：￥"+ str(class_iterator["Deposit"]))
-            if class_iterator["Coupons"] !=[]:
-                print("优惠明细："+class_iterator["Coupons"])
-        print("结算明细：")
-        print("课程总数："+ str(r["AppendData"]["ClassNum"])+"个")
-        print("课程费用：￥"+ str(round(r["AppendData"]["TotalPrice"])))
-        if r["AppendData"]["TotalDeposit"] != 0.0:
-            print("总押金￥："+ str(r["AppendData"]["TotalDeposit"]))
-        if r["AppendData"]["TotalManageFee"] != 0.0:
-            print("总管理费：￥" + str(r["AppendData"]["TotalManageFee"]))
-        if not r["AppendData"]["MemberCoupons"] is None:
-            print(r["AppendData"]["MemberCoupons"]["CouponPolicy"]+":￥"+str(round(r["AppendData"]["MemberCoupons"]["Amount"])))
-            for items_iterator in r["AppendData"]["MemberCoupons"]["Items"]:
-                print("     "+items_iterator["CouponPolicyName"]+":￥"+str(round(items_iterator["Amount"])))
-        if not r["AppendData"]["CDAndSysCoupons"] is None:
-            print(r["AppendData"]["CDAndSysCoupons"]["CouponPolicy"]+":￥"+str(round(r["AppendData"]["CDAndSysCoupons"]["Amount"])))
-            for items_iterator in r["AppendData"]["CDAndSysCoupons"]["Items"]:
-                print("     " + items_iterator["CouponPolicyName"] + ":￥" + str(round(items_iterator["Amount"])))
-        print("优惠券："+r["AppendData"]["CouponUsedStatus"]["Tips"]+":￥"+str(round(r["AppendData"]["CouponUsedStatus"]["Amount"])))
-        print("合计：￥" + str(round(r["AppendData"]["AmountPayable"])))
-        return r
 
 def shoppingCartList(uToken,studentCode):
     '''
@@ -169,11 +82,11 @@ def shoppingCartList(uToken,studentCode):
     '''
 
     '''初始化数据'''
-    url = conf["test_url"] + "/V5/WebOrder/ShoppingCartList"
+    url = conf["domain_test"] + conf["shopping_cart_list"]
 
     '''传参'''
     p = {"StudentCode": studentCode}
-    sign = commonFuns.getSign(uToken,params = p)
+    sign = commonAction.getSign(uToken, params = p)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8", "uToken": uToken}
 
     '''发送请求'''

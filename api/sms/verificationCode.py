@@ -1,7 +1,7 @@
 import hashlib
 import requests
-from config import readConfig
-from common import  commonFuns
+from config import configAction
+from common import  commonAction
 
 def getVerificationCode(phone,type):
     '''
@@ -11,18 +11,18 @@ def getVerificationCode(phone,type):
     '''
 
     '''初始化数据'''
-    c = readConfig.ReadConfig().get_conf()
-    url = c["test_url"] + "/V3/SMS/VerificationCode"
+    conf = configAction.get_conf()
+    url = conf["domain_test"] + conf["verification_code"]
 
     '''传参'''
     p = {"phone": phone, "type": type}
-    sign = commonFuns.getSign(params = p)
+    sign = commonAction.getSign(params = p)
     h = {"sign": sign, "partner": "10016"}
 
     '''发送请求'''
     resp = requests.get(url = url, params = p, headers = h)
     r = resp.json()
-    vCode = r["AppendData"]
+    code = r["AppendData"]
 
     '''获取成功返回验证码'''
     try:
@@ -30,5 +30,5 @@ def getVerificationCode(phone,type):
     except AssertionError:
         print("获得验证码失败，错误类型:" + str(r["ResultType"]) + ",错误信息:" + r["Message"])
     else:
-        print("验证码为:" + vCode)
-        return vCode
+        print("验证码为:" + code)
+        return code

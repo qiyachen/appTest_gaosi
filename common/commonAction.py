@@ -2,9 +2,11 @@ from urllib.parse import urlencode
 import json
 import hashlib
 
+'''基本操作'''
+
 def getSign(uToken = None,params = None,data = None):
     '''
-    获取sign的MD5值
+    获取验证签名的sign值
     :param uToken: token  类型string
     :param data: url中键值对 类型dict
     :param body: 正文信息 类型dict

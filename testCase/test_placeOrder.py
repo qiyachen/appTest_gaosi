@@ -3,7 +3,9 @@ import unittest
 import os
 import xlrd
 import time
-from config import readConfig
+
+import api.webOrder.price
+from config import configAction
 from api.student import login
 from api.webOrder import shoppingCart
 
@@ -12,8 +14,9 @@ class PlaceOrder(unittest.TestCase):
     def setUp(self):
         '''初始化数据'''
         print("-初始化-")
+
         '''获得utoken/student_code'''
-        conf = readConfig.ReadConfig().get_conf()
+        conf = configAction.get_conf()
         phone = conf["phone"]
         psw = conf["password_test"]
         resp = login.loginByPassword(phone, psw)
@@ -73,7 +76,7 @@ class PlaceOrder(unittest.TestCase):
                     i["LessonNum"] = parts["LessonNum"]
                     calc_items.append(i)
                     print(str(calc_items))
-        shoppingCart.calcPrice(self.uToken, calc_items, self.studentCode) #不使用优惠券
+        api.webOrder.price.calcPrice(self.uToken, calc_items, self.studentCode) #不使用优惠券
 
 
 
