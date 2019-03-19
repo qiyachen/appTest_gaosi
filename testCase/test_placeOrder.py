@@ -3,10 +3,9 @@ import unittest
 import os
 import xlrd
 import time
-
-from config import configAction
+from config import configFunction
 from api.student import login,accountBalance
-from api.webOrder import shoppingCart,price
+from api.webOrder import shoppingCart,price,order
 
 class PlaceOrder(unittest.TestCase):
     def setUp(self):
@@ -14,7 +13,7 @@ class PlaceOrder(unittest.TestCase):
         print("-初始化-")
 
         '''获得token和学生编号'''
-        conf = configAction.get_conf()
+        conf = configFunction.get_conf()
         phone = conf["phone"]
         psw = conf["password_test"]
         resp = login.loginByPassword(phone, psw)
@@ -78,7 +77,32 @@ class PlaceOrder(unittest.TestCase):
                     i["LessonNum"] = parts["LessonNum"]
                     calc_items.append(i)
 
-        price.calcPrice(self.uToken, calc_items, self.studentCode,self.goldCoin,self.balance) #自动选择优惠券
+        price_resp = price.calcPrice(self.uToken, calc_items, self.studentCode,self.goldCoin,self.balance) #自动选择优惠券
+
+        '''下单'''
+        order_items = []
+        for class_iterator in price_resp["AppendData"]["Items"]:
+            classes = {}
+            classes["ClassCode"] = class_iterator["ClassCode"]
+            classes["StartLessonNo"] = class_iterator["StartLessonNo"]
+            classes["RegLessonNum"] = class_iterator["RegLessonNum"]
+            classes["Price"] = class_iterator["Price"]
+            classes["Deposit"] = class_iterator["Deposit"]
+            classes["ManageFee"] = class_iterator["ManageFee"]
+            classes["MaxGoldCoinPayAmount"] = class_iterator["MaxGoldCoinPayAmount"]
+            classes["Coupons"] = class_iterator["Coupons"]
+            order_items.append(classes)
+
+        order_resp = order.placeOrder(self.uToken,self.studentCode,self.goldCoin,self.balance,order_items)
+
+        '''取消订单'''
+        if order_resp["ResultType"]==0:
+            orderCode = order_resp["AppendData"]["OrderCode"]
+            order.cancelOrder(self.uToken,self.studentCode,orderCode)
+
+
+
+
 
 
 

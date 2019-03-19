@@ -1,10 +1,10 @@
 import json
 import requests
-from common import commonAction,commonEnum
-from config import configAction
+from common import commonFunction,commonEnum
+from config import configFunction
 
 
-conf = configAction.get_conf()
+conf = configFunction.get_conf()
 semester = commonEnum.semester
 
 def calcPrice(uToken,items,studentCode,goidCoin = None,balance = None,choosedCoupon = False,selectedCouponIds = None):
@@ -34,7 +34,7 @@ def calcPrice(uToken,items,studentCode,goidCoin = None,balance = None,choosedCou
     elif choosedCoupon == True and selectedCouponIds != None:
         print("计算价格参数有误！")
 
-    sign = commonAction.getSign(uToken, data = d)
+    sign = commonFunction.getSign(uToken, data = d)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8", "uToken": uToken}
 
     '''发送请求'''
@@ -86,5 +86,6 @@ def calcPrice(uToken,items,studentCode,goidCoin = None,balance = None,choosedCou
             print("高思币：共"+str(int(goidCoin))+"个,本次使用"+str(int(g)))
         if balance != 0.00:
             print("余额：￥"+str(balance))
-        print("合计：￥" + str(round(r["AppendData"]["AmountPayable"])))
+        price = r["AppendData"]["AmountPayable"] - g -balance
+        print("合计：￥" + str(round(price)))
         return r

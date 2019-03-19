@@ -19,6 +19,6 @@ if __name__ == '__main__':
     now = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
 
     # 设置报告名称格式
-    HtmlFile =  now + "Report.html"
-    result = BeautifulReport(suite)
-    result.report(filename=HtmlFile, description='App接口测试报告', log_path=report_dir)
+    reportFile =  now + "Report.txt"
+
+    #暂时没想好报告导出什么数据，怎么展示#
