@@ -3,16 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3c0baba9-bed5-4f52-aa42-b564ed8c6fed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/webOrder/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/webOrder/order.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/webOrder/price.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/webOrder/price.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runAll.py" beforeDir="false" afterPath="$PROJECT_DIR$/runAll.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testCase/test_placeOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCase/test_placeOrder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testFile/placeOrder.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/testFile/placeOrder.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testResult/2019-03-08-16_15_55Report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testResult/2019-03-08-16_54_01Report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testResult/2019-03-08-16_55_34Report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testResult/2019-03-12-13_12_32Report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/sms/verificationCode.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/sms/verificationCode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/student/accountBalance.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/student/accountBalance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/student/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/student/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/webOrder/shoppingCart.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/webOrder/shoppingCart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/commonAction.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/commonFunction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/configAction.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/configFunction.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/webOrder/price.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="88" column="61" lean-forward="true" selection-start-line="88" selection-start-column="61" selection-end-line="88" selection-end-column="61" />
+            <state relative-caret-position="1870">
+              <caret line="88" column="61" selection-start-line="88" selection-start-column="61" selection-end-line="88" selection-end-column="61" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -34,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/webOrder/order.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="198">
+              <caret line="59" column="12" lean-forward="true" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -49,7 +45,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/runAll.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
+            <state relative-caret-position="418">
               <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -59,10 +55,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/commonAction.py">
+        <entry file="file://$PROJECT_DIR$/common/commonFunction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="57" column="23" lean-forward="true" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+            <state relative-caret-position="1210">
+              <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -73,7 +69,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-430217226/builtins.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
+            <state relative-caret-position="62172">
               <caret line="2826" column="8" selection-start-line="2826" selection-start-column="8" selection-end-line="2826" selection-end-column="8" />
             </state>
           </provider>
@@ -82,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/unittest/__init__.pyi">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-578">
+            <state relative-caret-position="572">
               <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
             </state>
           </provider>
@@ -91,7 +87,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/config.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="572">
               <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
             </state>
           </provider>
@@ -100,7 +96,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/sms/verificationCode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
+            <state relative-caret-position="528">
               <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -112,7 +108,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testCase/test_placeOrder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="2068">
               <caret line="100" column="22" lean-forward="true" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="29" />
               <folding>
                 <element signature="e#24#39#0" expanded="true" />
@@ -194,12 +190,12 @@
         <option value="$PROJECT_DIR$/api/student/accountBalance.py" />
         <option value="$PROJECT_DIR$/common/commonAction.py" />
         <option value="$PROJECT_DIR$/api/webOrder/price.py" />
-        <option value="$PROJECT_DIR$/api/webOrder/order.py" />
         <option value="$PROJECT_DIR$/testCase/test_placeOrder.py" />
         <option value="$PROJECT_DIR$/config/config.ini" />
         <option value="$PROJECT_DIR$/config/config.ini" />
         <option value="$PROJECT_DIR$/runAll.py" />
         <option value="$PROJECT_DIR$/runAll.py" />
+        <option value="$PROJECT_DIR$/api/webOrder/order.py" />
       </list>
     </option>
   </component>
@@ -217,17 +213,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="appTest" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -249,6 +234,11 @@
             <path>
               <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="appTest_gaosi" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="appTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="appTest_gaosi" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -265,6 +255,17 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="appTest" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,16 +273,16 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\PycharmProjects\interfactTest\app" />
-      <recent name="C:\Users\Administrator\PycharmProjects\TestDemo\Pack1" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\appTest_gaosi\api\sms" />
       <recent name="D:\appTest_gaosi\api\student" />
       <recent name="D:\appTest_gaosi\api\webOrder" />
       <recent name="C:\Users\Administrator\PycharmProjects\appTest" />
       <recent name="C:\Users\Administrator\PycharmProjects\appTest\api\app" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\interfactTest\app" />
+      <recent name="C:\Users\Administrator\PycharmProjects\TestDemo\Pack1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -444,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552628752561</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="19.03.19&#10;1.新增提交订单&#10;2.新增取消订单">
+      <created>1552958616400</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1552958616400</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -489,9 +497,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29722223" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15232722" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -502,28 +510,28 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32884097" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.21832883" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.21727748" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5014104" side_tool="true" weight="0.3001346" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32984293" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25105783" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.29722223" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32614556" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49858958" visible="true" weight="0.45956874" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49858958" weight="0.4908377" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39892185" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32896653" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32884097" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.21832883" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21727748" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5014104" side_tool="true" weight="0.3001346" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32984293" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -532,7 +540,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新增计算课程费用接口" />
     <MESSAGE value="19.03.15&#10;1.重构config 遍历配置文件中全部值&#10;2.新增commonEnum枚举&#10;3.新增price相关接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="19.03.15&#10;1.重构config 遍历配置文件中全部值&#10;2.新增commonEnum枚举&#10;3.新增price相关接口" />
+    <MESSAGE value="19.03.19&#10;1.新增提交订单&#10;2.新增取消订单" />
+    <option name="LAST_COMMIT_MESSAGE" value="19.03.19&#10;1.新增提交订单&#10;2.新增取消订单" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/testResult/2019-03-07-17_30_14Report.html" />
@@ -562,9 +571,7 @@
     <entry file="file://$PROJECT_DIR$/testResult/2019-03-08-15_34_39Report.html" />
     <entry file="file://$PROJECT_DIR$/testResult/2019-03-08-15_59_13Report.html" />
     <entry file="file://$PROJECT_DIR$/testCase/test_registration.py" />
-    <entry file="file://$PROJECT_DIR$/testResult/2019-03-08-16_55_34Report.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/testResult/2019-03-08-16_55_34Report.html" />
     <entry file="file://$PROJECT_DIR$/common/sortA2Z.py" />
     <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-483601669/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -580,9 +587,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testResult/2019-03-12-13_12_32Report.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/testResult/2019-03-12-13_12_32Report.html" />
     <entry file="file://$PROJECT_DIR$/testCase/test_getVerificationCode.py" />
     <entry file="file://$PROJECT_DIR$/api/app/demo.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/requests/api.py">
@@ -608,7 +613,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/configAction.py">
+    <entry file="file://$PROJECT_DIR$/config/configFunction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
@@ -635,13 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/unittest/__init__.pyi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-578">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/BeautifulReport/BeautifulReport.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7238">
@@ -656,63 +654,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-430217226/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="2826" column="8" selection-start-line="2826" selection-start-column="8" selection-end-line="2826" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/sms/verificationCode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/commonAction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="57" column="23" lean-forward="true" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/webOrder/price.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="88" column="61" lean-forward="true" selection-start-line="88" selection-start-column="61" selection-end-line="88" selection-end-column="61" />
+        <state relative-caret-position="1870">
+          <caret line="88" column="61" selection-start-line="88" selection-start-column="61" selection-end-line="88" selection-end-column="61" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testCase/test_placeOrder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="100" column="22" lean-forward="true" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="29" />
-          <folding>
-            <element signature="e#24#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/runAll.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
+        <state relative-caret-position="418">
           <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -720,10 +674,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/common/commonFunction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1210">
+          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-430217226/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62172">
+          <caret line="2826" column="8" selection-start-line="2826" selection-start-column="8" selection-end-line="2826" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/unittest/__init__.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/sms/verificationCode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testCase/test_placeOrder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2068">
+          <caret line="100" column="22" lean-forward="true" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="29" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/webOrder/order.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="198">
+          <caret line="59" column="12" lean-forward="true" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

@@ -16,6 +16,7 @@ def getSign(uToken = None,params = None,data = None):
     '''1.取得Url中键值对(data)和Head中的键值对(h：包含partner和uToken)，并把key转换成小写'''
     h = {"partner":10016}
     p = {}
+    p_lower = {}
     if uToken != None:  #添加 uToken到header中
         h["uToken"] = uToken
     if params != None:    #合并url和head中键值对
@@ -23,14 +24,16 @@ def getSign(uToken = None,params = None,data = None):
         p.update(params)
     else:
         p.update(h)
+    print(p.keys())
     for key in p:       #大小写转换
-        p[str.lower(key)] = p.pop(key)
+        p_lower[str.lower(key)] = p[key]
+    print(p_lower.keys())
 
     '''把所有的键值对按 a-z 顺序排列'''
     p_sort = {}
-    while p != {}:      #遍历key值，将最小值前置
-        k = min(p.keys())
-        p_sort[k] = p.pop(k)
+    while p_lower != {}:      #遍历key值，将最小值前置
+        k = min(p_lower.keys())
+        p_sort[k] = p_lower.pop(k)
 
     '''key重复时，排序value，并合并成一个新value'''
     for k in p_sort.keys():
@@ -55,7 +58,7 @@ def getSign(uToken = None,params = None,data = None):
     '''4.把 s 进行 MD5 算法，得到签名sign'''
     sign = hashlib.md5(s.encode(encoding='UTF-8')).hexdigest()
 
-  #  print("签名字符串为："+s)
-  #  print(sign)
+    print("签名字符串为："+s)
+    print(sign)
     return sign
 

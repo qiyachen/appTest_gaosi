@@ -1,9 +1,9 @@
-from config import configAction
-from common import commonAction
+from config import configFunction
+from common import commonFunction
 import json
 import requests
 
-conf = configAction.get_conf()
+conf = configFunction.get_conf()
 
 def accountBalance(uToken,studentCode):
     '''
@@ -17,7 +17,7 @@ def accountBalance(uToken,studentCode):
 
     '''传参'''
     p = {"StudentCode":studentCode}
-    sign = commonAction.getSign(uToken, params=p)
+    sign = commonFunction.getSign(uToken, params=p)
     h = {"sign": sign,"uToken":uToken, "partner": "10016"}
 
     '''发送请求'''
@@ -35,6 +35,6 @@ def accountBalance(uToken,studentCode):
 
 if __name__ == '__main__':
     a = {"StudentCode":"BJ213965"}
-    commonAction.getSign('d2abc64e24e74a158f283282197bf926',params=a)
-    commonAction.getSign('d2abc64e24e74a158f283282197bf926',data = a)
+    commonFunction.getSign('d2abc64e24e74a158f283282197bf926', params=a)
+    commonFunction.getSign('d2abc64e24e74a158f283282197bf926', data = a)
     print("49aaff8b7b3727e41c1bd90507616dc1")

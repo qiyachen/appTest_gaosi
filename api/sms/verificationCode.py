@@ -1,7 +1,7 @@
 import hashlib
 import requests
-from config import configAction
-from common import  commonAction
+from config import configFunction
+from common import  commonFunction
 
 def getVerificationCode(phone,type):
     '''
@@ -11,12 +11,12 @@ def getVerificationCode(phone,type):
     '''
 
     '''初始化数据'''
-    conf = configAction.get_conf()
+    conf = configFunction.get_conf()
     url = conf["domain_test"] + conf["verification_code"]
 
     '''传参'''
     p = {"phone": phone, "type": type}
-    sign = commonAction.getSign(params = p)
+    sign = commonFunction.getSign(params = p)
     h = {"sign": sign, "partner": "10016"}
 
     '''发送请求'''

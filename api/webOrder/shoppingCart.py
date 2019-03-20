@@ -1,9 +1,9 @@
-from config import configAction
+from config import configFunction
 import json
 import requests
-from common import commonAction,commonEnum
+from common import commonFunction,commonEnum
 
-conf =  configAction.get_conf()
+conf =  configFunction.get_conf()
 semester = commonEnum.semester
 
 def addShoppingCart(uToken,studentCode,classCodes,isPromoted):
@@ -24,7 +24,7 @@ def addShoppingCart(uToken,studentCode,classCodes,isPromoted):
         "ClassCodes": classCodes,
         "IsPromoted": isPromoted
         }
-    sign = commonAction.getSign(uToken, data = d)
+    sign = commonFunction.getSign(uToken, data = d)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8", "uToken":uToken }
 
     '''发送请求'''
@@ -56,7 +56,7 @@ def removeShoppingCart(uToken,studentCode,classCodes):
     d = {"StudentCode": studentCode,
         "ClassCodes": classCodes,
         }
-    sign = commonAction.getSign(uToken, data = d)
+    sign = commonFunction.getSign(uToken, data = d)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8", "uToken":uToken }
 
     '''发送请求'''
@@ -86,7 +86,7 @@ def shoppingCartList(uToken,studentCode):
 
     '''传参'''
     p = {"StudentCode": studentCode}
-    sign = commonAction.getSign(uToken, params = p)
+    sign = commonFunction.getSign(uToken, params = p)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8", "uToken": uToken}
 
     '''发送请求'''

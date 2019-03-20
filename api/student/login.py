@@ -1,10 +1,10 @@
-from config import configAction
+from config import configFunction
 from api.sms import verificationCode
 import json
 import requests
-from common import commonAction
+from common import commonFunction
 
-conf = configAction.get_conf()
+conf = configFunction.get_conf()
 
 def loginByPassword(phone,password):
     '''密码登录'''
@@ -14,7 +14,7 @@ def loginByPassword(phone,password):
 
     '''传参'''
     d = {"Phone": phone, "Password": password}
-    sign = commonAction.getSign(data = d)
+    sign = commonFunction.getSign(data = d)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8"}
 
     '''发送请求'''
@@ -41,7 +41,7 @@ def loginByVerificationCode(phone):
 
     '''传参'''
     d = {"Phone": phone, "VerificationCode": verificationCode.getVerificationCode(phone, '0')} #0为登录
-    sign = commonAction.getSign(data = d)
+    sign = commonFunction.getSign(data = d)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8"}
 
     '''发送请求'''

@@ -5,7 +5,7 @@ import xlrd
 import time
 from config import configFunction
 from api.student import login,accountBalance
-from api.webOrder import shoppingCart,price,order
+from api.webOrder import shoppingCart,price,order,paymentParamesters
 
 class PlaceOrder(unittest.TestCase):
     def setUp(self):
@@ -94,6 +94,11 @@ class PlaceOrder(unittest.TestCase):
             order_items.append(classes)
 
         order_resp = order.placeOrder(self.uToken,self.studentCode,self.goldCoin,self.balance,order_items)
+
+        '''调支付宝'''
+        if order_resp["ResultType"]==0:
+            orderCode = order_resp["AppendData"]["OrderCode"]
+            paymentParamesters.alipayAppPaymentParamesters(self.uToken,orderCode)
 
         '''取消订单'''
         if order_resp["ResultType"]==0:
