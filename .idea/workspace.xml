@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c0baba9-bed5-4f52-aa42-b564ed8c6fed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api/webOrder/paymentParamesters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/sms/verificationCode.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/sms/verificationCode.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/student/accountBalance.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/student/accountBalance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/student/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/student/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/webOrder/shoppingCart.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/webOrder/shoppingCart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/commonAction.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/commonFunction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/configAction.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/configFunction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/commonFunction.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/commonFunction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testCase/test_placeOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCase/test_placeOrder.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/webOrder/price.py">
+      <file pinned="true" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/webOrder/order.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1870">
-              <caret line="88" column="61" selection-start-line="88" selection-start-column="61" selection-end-line="88" selection-end-column="61" />
+            <state relative-caret-position="198">
+              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -30,13 +27,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/webOrder/order.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/webOrder/paymentParamesters.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="59" column="12" lean-forward="true" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+            <state relative-caret-position="487">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common/commonFunction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1210">
-              <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+            <state relative-caret-position="333">
+              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -88,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/config/config.ini">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="572">
-              <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -97,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/api/sms/verificationCode.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="528">
-              <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -108,10 +105,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testCase/test_placeOrder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2068">
-              <caret line="100" column="22" lean-forward="true" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="29" />
+            <state relative-caret-position="2200">
+              <caret line="100" column="65" selection-start-line="100" selection-start-column="65" selection-end-line="100" selection-end-column="65" />
               <folding>
                 <element signature="e#24#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/configFunction.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,8 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/common/demo.py" />
-        <option value="$PROJECT_DIR$/testCase/login.py" />
         <option value="$PROJECT_DIR$/testCase/sms/test_verificationCode.py" />
         <option value="$PROJECT_DIR$/testCase/students/test_login.py" />
         <option value="$PROJECT_DIR$/config/config.py" />
@@ -190,12 +197,14 @@
         <option value="$PROJECT_DIR$/api/student/accountBalance.py" />
         <option value="$PROJECT_DIR$/common/commonAction.py" />
         <option value="$PROJECT_DIR$/api/webOrder/price.py" />
-        <option value="$PROJECT_DIR$/testCase/test_placeOrder.py" />
         <option value="$PROJECT_DIR$/config/config.ini" />
         <option value="$PROJECT_DIR$/config/config.ini" />
         <option value="$PROJECT_DIR$/runAll.py" />
         <option value="$PROJECT_DIR$/runAll.py" />
         <option value="$PROJECT_DIR$/api/webOrder/order.py" />
+        <option value="$PROJECT_DIR$/api/webOrder/paymentParamesters.py" />
+        <option value="$PROJECT_DIR$/testCase/test_placeOrder.py" />
+        <option value="$PROJECT_DIR$/common/commonFunction.py" />
       </list>
     </option>
   </component>
@@ -452,13 +461,17 @@
       <option name="project" value="LOCAL" />
       <updated>1552958616400</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="19.03.20&#10;1.解决签名大小写转换问题">
+      <created>1553046269806</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1553046269806</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_placeOrder_PlaceOrder_test_placeOrder - 2019.03.18 at 10h 48m 29s.xml">
-      <configuration name="Unittests for test_placeOrder.PlaceOrder.test_placeOrder" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_test_placeOrder_PlaceOrder_test_placeOrder - 2019.03.18 at 10h 56m 42s.xml">
       <configuration name="Unittests for test_placeOrder.PlaceOrder.test_placeOrder" configurationId="tests" />
     </history-entry>
@@ -486,6 +499,9 @@
     <history-entry file="Unittests_for_test_placeOrder_PlaceOrder_test_placeOrder - 2019.03.18 at 11h 41m 25s.xml">
       <configuration name="Unittests for test_placeOrder.PlaceOrder.test_placeOrder" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_test_placeOrder_PlaceOrder_test_placeOrder - 2019.03.20 at 09h 43m 43s.xml">
+      <configuration name="Unittests for test_placeOrder.PlaceOrder.test_placeOrder" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -497,20 +513,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15232722" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30606487" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32614556" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49858958" weight="0.4908377" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49858958" weight="0.49056605" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39892185" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32884097" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.21727748" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21698113" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5014104" side_tool="true" weight="0.3001346" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32984293" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -541,11 +558,10 @@
     <MESSAGE value="新增计算课程费用接口" />
     <MESSAGE value="19.03.15&#10;1.重构config 遍历配置文件中全部值&#10;2.新增commonEnum枚举&#10;3.新增price相关接口" />
     <MESSAGE value="19.03.19&#10;1.新增提交订单&#10;2.新增取消订单" />
-    <option name="LAST_COMMIT_MESSAGE" value="19.03.19&#10;1.新增提交订单&#10;2.新增取消订单" />
+    <MESSAGE value="19.03.20&#10;1.解决签名大小写转换问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="19.03.20&#10;1.解决签名大小写转换问题" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testResult/2019-03-07-17_30_14Report.html" />
-    <entry file="file://$PROJECT_DIR$/testResult/2019-03-07-17_31_51Report.html" />
     <entry file="file://$PROJECT_DIR$/testResult/2019-03-07-17_33_16Report.html" />
     <entry file="file://$PROJECT_DIR$/testResult/2019-03-07-17_48_12Report.html" />
     <entry file="file://$PROJECT_DIR$/testResult/2019-03-07-17_55_59Report.html" />
@@ -613,16 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/configFunction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/webOrder/shoppingCart.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -674,16 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/commonFunction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-430217226/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62172">
@@ -701,26 +697,16 @@
     <entry file="file://$PROJECT_DIR$/config/config.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
-          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/sms/verificationCode.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
-          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testCase/test_placeOrder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2068">
-          <caret line="100" column="22" lean-forward="true" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="29" />
-          <folding>
-            <element signature="e#24#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -728,9 +714,59 @@
     <entry file="file://$PROJECT_DIR$/api/webOrder/order.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="59" column="12" lean-forward="true" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/webOrder/e.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="26" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/webOrder/paymentParamesters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testCase/test_placeOrder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2200">
+          <caret line="100" column="65" selection-start-line="100" selection-start-column="65" selection-end-line="100" selection-end-column="65" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/configFunction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/commonFunction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>

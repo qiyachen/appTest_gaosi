@@ -98,7 +98,7 @@ class PlaceOrder(unittest.TestCase):
         '''调支付宝'''
         if order_resp["ResultType"]==0:
             orderCode = order_resp["AppendData"]["OrderCode"]
-            paymentParamesters.alipayAppPaymentParamesters(self.uToken,orderCode)
+            paymentParamesters.alipayAppPaymentParamesters(self.uToken, orderCode)
 
         '''取消订单'''
         if order_resp["ResultType"]==0:

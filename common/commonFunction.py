@@ -27,7 +27,6 @@ def getSign(uToken = None,params = None,data = None):
     print(p.keys())
     for key in p:       #大小写转换
         p_lower[str.lower(key)] = p[key]
-    print(p_lower.keys())
 
     '''把所有的键值对按 a-z 顺序排列'''
     p_sort = {}
@@ -58,7 +57,7 @@ def getSign(uToken = None,params = None,data = None):
     '''4.把 s 进行 MD5 算法，得到签名sign'''
     sign = hashlib.md5(s.encode(encoding='UTF-8')).hexdigest()
 
-    print("签名字符串为："+s)
-    print(sign)
+    #print("签名字符串为："+s)
+    #print(sign)
     return sign
 
