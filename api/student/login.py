@@ -2,7 +2,7 @@ from config import configFunction
 from api.sms import verificationCode
 import json
 import requests
-from common import commonFunction
+from common import getSign
 
 conf = configFunction.get_conf()
 
@@ -14,7 +14,7 @@ def loginByPassword(phone,password):
 
     '''传参'''
     d = {"Phone": phone, "Password": password}
-    sign = commonFunction.getSign(data = d)
+    sign = getSign.getSign(data = d)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8"}
 
     '''发送请求'''
@@ -41,7 +41,7 @@ def loginByVerificationCode(phone):
 
     '''传参'''
     d = {"Phone": phone, "VerificationCode": verificationCode.getVerificationCode(phone, '0')} #0为登录
-    sign = commonFunction.getSign(data = d)
+    sign = sign.getSign(data = d)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8"}
 
     '''发送请求'''

@@ -1,12 +1,12 @@
 from config import configFunction
 import json
 import requests
-from common import commonFunction,commonEnum
+from common import getSign,enum
 
 conf =  configFunction.get_conf()
-semester = commonEnum.semester
+semester = enum.semester
 
-def addShoppingCart(uToken,studentCode,classCodes,isPromoted):
+def addShoppingCart(host,uToken,studentCode,classCodes,isPromoted):
     '''
     添加班级到指定学员的购物车中，不允许重复添加
     :param uToken:
@@ -17,14 +17,14 @@ def addShoppingCart(uToken,studentCode,classCodes,isPromoted):
     '''
 
     '''初始化数据'''
-    url = conf["domain_test"] + conf["add_shopping_cart"]
+    url = host + conf["add_shopping_cart"]
 
     '''传参'''
     d = {"StudentCode": studentCode,
         "ClassCodes": classCodes,
         "IsPromoted": isPromoted
         }
-    sign = commonFunction.getSign(uToken, data = d)
+    sign = getSign.getSign(uToken, data = d)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8", "uToken":uToken }
 
     '''发送请求'''
@@ -40,7 +40,7 @@ def addShoppingCart(uToken,studentCode,classCodes,isPromoted):
         print(str(classCodes) + "已成功添加购物车")
         return r
 
-def removeShoppingCart(uToken,studentCode,classCodes):
+def removeShoppingCart(host,uToken,studentCode,classCodes):
     '''
     移除购物车,把班级从学员的购物车中移除
     :param uToken:
@@ -50,13 +50,13 @@ def removeShoppingCart(uToken,studentCode,classCodes):
     '''
 
     '''初始化数据'''
-    url = conf["domain_test"] + conf["remove_shopping_cart"]
+    url = host + conf["remove_shopping_cart"]
 
     '''传参'''
     d = {"StudentCode": studentCode,
         "ClassCodes": classCodes,
         }
-    sign = commonFunction.getSign(uToken, data = d)
+    sign = getSign.getSign(uToken, data = d)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8", "uToken":uToken }
 
     '''发送请求'''
@@ -73,7 +73,7 @@ def removeShoppingCart(uToken,studentCode,classCodes):
         return r
 
 
-def shoppingCartList(uToken,studentCode):
+def shoppingCartList(host ,uToken,studentCode):
     '''
     获取指定学员的购物车内班级列表
     :param uToken:
@@ -82,11 +82,11 @@ def shoppingCartList(uToken,studentCode):
     '''
 
     '''初始化数据'''
-    url = conf["domain_test"] + conf["shopping_cart_list"]
+    url = host + conf["shopping_cart_list"]
 
     '''传参'''
     p = {"StudentCode": studentCode}
-    sign = commonFunction.getSign(uToken, params = p)
+    sign = getSign.getSign(uToken, params = p)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8", "uToken": uToken}
 
     '''发送请求'''
@@ -104,14 +104,18 @@ def shoppingCartList(uToken,studentCode):
             sem = semester[classes["Items"][0]["Semester"]]
             print("有效课程" +": "+str(classes["Items"][0]["Name"])+" "+str(classes["Items"][0]["Code"]))
             for parts in classes["Items"][0]["Items"]:
+                if parts["Enable"] == True:
+                    check = "√"
+                else:
+                    check = "×"
                 if parts["Purchased"] == True :
                      price = '已购买'
                 else:
                     price = str(round(parts["Price"]))
                 if parts["StartLessonNo"] == parts["EndLessonNo"]:
-                    print("     "+sem +"-"+ parts["Section"]+":"+"第"+str(parts["StartLessonNo"])+"次课")
+                    print("     "+ check +sem +"-"+ parts["Section"]+":"+"第"+str(parts["StartLessonNo"])+"次课")
                 else:
-                    print("     "+sem +"-"+ parts["Section"]+":"+
+                    print("     "+ check +sem +"-"+ parts["Section"]+":"+
                           "第" +str(parts["StartLessonNo"]) + "-"+ str(parts["EndLessonNo"]) +"次课:￥"+price )
         for classes in r["AppendData"]["InvalidItems"]:
             print("失效课程" + ": " + str(classes["Name"]) + " " + str(classes["Code"]))

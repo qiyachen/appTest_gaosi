@@ -24,7 +24,6 @@ def getSign(uToken = None,params = None,data = None):
         p.update(params)
     else:
         p.update(h)
-    print(p.keys())
     for key in p:       #大小写转换
         p_lower[str.lower(key)] = p[key]
 

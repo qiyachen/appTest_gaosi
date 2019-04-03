@@ -1,7 +1,7 @@
 import hashlib
 import requests
 from config import configFunction
-from common import  commonFunction
+from common import  getSign
 
 def getVerificationCode(phone,type):
     '''
@@ -16,7 +16,7 @@ def getVerificationCode(phone,type):
 
     '''传参'''
     p = {"phone": phone, "type": type}
-    sign = commonFunction.getSign(params = p)
+    sign = sign.getSign(params = p)
     h = {"sign": sign, "partner": "10016"}
 
     '''发送请求'''

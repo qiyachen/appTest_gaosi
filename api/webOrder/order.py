@@ -1,11 +1,11 @@
 import json
 import requests
-from common import commonFunction
+from common import getSign
 from config import configFunction
 
 conf = configFunction.get_conf()
 
-def placeOrder(uToken,studentCode,goldCoinAmount,accountBalanceAmount,items):
+def placeOrder(host,uToken,studentCode,goldCoinAmount,accountBalanceAmount,items):
     """
     提交订单，并返回订单编号和应付金额
     :param uToken:
@@ -17,7 +17,7 @@ def placeOrder(uToken,studentCode,goldCoinAmount,accountBalanceAmount,items):
     """
 
     '''初始化数据'''
-    url = conf["domain_test"] + conf["place_order"]
+    url = host + conf["place_order"]
 
     '''传参'''
     d = {
@@ -28,7 +28,7 @@ def placeOrder(uToken,studentCode,goldCoinAmount,accountBalanceAmount,items):
         "AccountBalanceAmount":accountBalanceAmount
     }
 
-    sign = commonFunction.getSign(uToken, data=d)
+    sign = getSign.getSign(uToken, data=d)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8", "uToken": uToken}
 
     '''发送请求'''
@@ -41,12 +41,16 @@ def placeOrder(uToken,studentCode,goldCoinAmount,accountBalanceAmount,items):
     except AssertionError:
         print("提交订单失败，错误类型:" + str(r["ResultType"]) + ",错误信息:" + r["Message"])
     else:
-        print("订单["+r["AppendData"]["OrderCode"]+"]提交成功，￥"+str(r["AppendData"]["AmountPayable"])+"，等待付款...")
-
+        if r["AppendData"]["AmountPayable"] != 0.0:
+            print("订单["+r["AppendData"]["OrderCode"]+"]提交成功，需付款￥"+str(round(r["AppendData"]["AmountPayable"]))+"，等待付款...")
+            r["IsPaid"] = False
+        else:
+            print("订单["+r["AppendData"]["OrderCode"]+"]提交成功，付款金额￥0，购买成功！")
+            r["IsPaid"] = True
     return r
 
 
-def cancelOrder(uToken,studentCode,orderCode):
+def cancelOrder(host,uToken,studentCode,orderCode):
     '''
     取消订单
     :param uToken:
@@ -55,7 +59,7 @@ def cancelOrder(uToken,studentCode,orderCode):
     :return:
     '''
     '''初始化数据'''
-    url = conf["domain_test"] + conf["cancel_order"]
+    url = host + conf["cancel_order"]
 
     '''传参'''
     d = {
@@ -63,7 +67,7 @@ def cancelOrder(uToken,studentCode,orderCode):
         "OrderCode": orderCode,
     }
 
-    sign = commonFunction.getSign(uToken, data=d)
+    sign = getSign.getSign(uToken, data=d)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8", "uToken": uToken}
 
     '''发送请求'''

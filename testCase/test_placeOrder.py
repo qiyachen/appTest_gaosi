@@ -10,12 +10,11 @@ from api.webOrder import shoppingCart,price,order,paymentParamesters
 class PlaceOrder(unittest.TestCase):
     def setUp(self):
         '''初始化数据'''
-        print("-初始化-")
-
         '''获得token和学生编号'''
-        conf = configFunction.get_conf()
-        phone = conf["phone"]
-        psw = conf["password_test"]
+        self.conf = configFunction.get_conf()
+        self.host = self.conf["domain_test"]
+        phone = self.conf["phone"]
+        psw = self.conf["password_test"]
         resp = login.loginByPassword(phone, psw)
         self.uToken = resp["AppendData"][0]["LoginToken"]
         self.studentCode = resp["AppendData"][0]["Code"]
@@ -29,7 +28,6 @@ class PlaceOrder(unittest.TestCase):
         self.classCodes = []
         for i in range(rows):
             self.classCodes.append(table.cell(i, 0).value)
-        time.sleep(1)
 
         '''获得高思币和余额'''
         balance_resp = accountBalance.accountBalance(self.uToken, self.studentCode)
@@ -40,13 +38,10 @@ class PlaceOrder(unittest.TestCase):
         ''''
         完成 添加选课单->查看选课单->计算订单
         '''
-        print("-测试支付订单开始-")
         print('测试课程为：'+str(self.classCodes))
-        time.sleep(1)
 
         '''查看选课单'''
-        cart_resp = shoppingCart.shoppingCartList(self.uToken, self.studentCode)
-        time.sleep(1)
+        cart_resp = shoppingCart.shoppingCartList(self.host,self.uToken, self.studentCode)
 
         '''清空选课单内有效课程，防止课程重复添加'''
         rmList= []
@@ -54,30 +49,30 @@ class PlaceOrder(unittest.TestCase):
             rmList.append(classes["Items"][0]["Code"])
         for classes in cart_resp["AppendData"]["InvalidItems"]:
             rmList.append(classes["Code"])
-        shoppingCart.removeShoppingCart(self.uToken, self.studentCode, rmList)
-        time.sleep(1)
+        shoppingCart.removeShoppingCart(self.host,self.uToken, self.studentCode, rmList)
 
         '''将课程添加至选课单'''
-        shoppingCart.addShoppingCart(self.uToken, self.studentCode, self.classCodes, False)
-        time.sleep(1)
+        shoppingCart.addShoppingCart(self.host,self.uToken, self.studentCode, self.classCodes, False)
+        time.sleep(0.5)
 
         '''查看选课单'''
-        cart_resp = shoppingCart.shoppingCartList(self.uToken, self.studentCode)
-        time.sleep(1)
+        cart_resp = shoppingCart.shoppingCartList(self.host,self.uToken, self.studentCode)
+        time.sleep(0.5)
+
 
         '''计算价格'''
         calc_items = []
         for classes in cart_resp["AppendData"]["Items"]:
             for details in classes["Items"]:
-
                 for parts in details["Items"]:
                     i = {}
-                    i["ClassCode"] = details["Code"]
-                    i["StartLessonNo"] = parts["StartLessonNo"]
-                    i["LessonNum"] = parts["LessonNum"]
-                    calc_items.append(i)
+                    if parts["Purchased"] == False and parts["Enable"] == True:
+                        i["ClassCode"] = details["Code"]
+                        i["StartLessonNo"] = parts["StartLessonNo"]
+                        i["LessonNum"] = parts["LessonNum"]
+                        calc_items.append(i)
 
-        price_resp = price.calcPrice(self.uToken, calc_items, self.studentCode,self.goldCoin,self.balance) #自动选择优惠券
+        price_resp = price.calcPrice(self.host,self.uToken, calc_items, self.studentCode,self.goldCoin,self.balance) #自动选择优惠券
 
         '''下单'''
         order_items = []
@@ -93,17 +88,20 @@ class PlaceOrder(unittest.TestCase):
             classes["Coupons"] = class_iterator["Coupons"]
             order_items.append(classes)
 
-        order_resp = order.placeOrder(self.uToken,self.studentCode,self.goldCoin,self.balance,order_items)
+        g = min(price_resp["AppendData"]["MaxGoldCoinAmount"],self.goldCoin,price_resp["AppendData"]["TotalPrice"],price_resp["AppendData"]["TotalPrice"] - price_resp["AppendData"]["CouponUsedStatus"]["Amount"])
+        order_resp = order.placeOrder(self.host,self.uToken,self.studentCode,g,self.balance,order_items)
 
-        '''调支付宝'''
-        if order_resp["ResultType"]==0:
-            orderCode = order_resp["AppendData"]["OrderCode"]
-            paymentParamesters.alipayAppPaymentParamesters(self.uToken, orderCode)
 
-        '''取消订单'''
-        if order_resp["ResultType"]==0:
+
+        if order_resp["ResultType"]==0 and order_resp["IsPaid"] == False:
+            '''调支付宝'''
             orderCode = order_resp["AppendData"]["OrderCode"]
-            order.cancelOrder(self.uToken,self.studentCode,orderCode)
+            alipay_resq = paymentParamesters.alipayAppPaymentParamesters(self.host,self.uToken, orderCode)
+            print(alipay_resq["AppendData"])
+
+            '''取消订单'''
+            orderCode = order_resp["AppendData"]["OrderCode"]
+            order.cancelOrder(self.host,self.uToken,self.studentCode,orderCode)
 
 
 

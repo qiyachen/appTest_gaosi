@@ -1,13 +1,13 @@
 import json
 import requests
-from common import commonFunction,commonEnum
+from common import getSign,enum
 from config import configFunction
 
 
 conf = configFunction.get_conf()
-semester = commonEnum.semester
+semester = enum.semester
 
-def calcPrice(uToken,items,studentCode,goidCoin = None,balance = None,choosedCoupon = False,selectedCouponIds = None):
+def calcPrice(host,uToken,items,studentCode,goidCoin = None,balance = None,choosedCoupon = False,selectedCouponIds = None):
     '''
     计算报名指定班级的价格和享受的优惠，可以使用优惠劵
     :param uToken:token
@@ -19,7 +19,7 @@ def calcPrice(uToken,items,studentCode,goidCoin = None,balance = None,choosedCou
     '''
 
     '''初始化数据'''
-    url = conf["domain_test"]+ conf["calc_price"]
+    url = host + conf["calc_price"]
 
     '''传参'''
     d = {
@@ -34,7 +34,7 @@ def calcPrice(uToken,items,studentCode,goidCoin = None,balance = None,choosedCou
     elif choosedCoupon == True and selectedCouponIds != None:
         print("计算价格参数有误！")
 
-    sign = commonFunction.getSign(uToken, data = d)
+    sign = getSign.getSign(uToken, data = d)
     h = {"sign": sign, "partner": "10016", "Content-Type": "application/json;charset=utf-8", "uToken": uToken}
 
     '''发送请求'''
@@ -81,8 +81,8 @@ def calcPrice(uToken,items,studentCode,goidCoin = None,balance = None,choosedCou
             for items_iterator in r["AppendData"]["CDAndSysCoupons"]["Items"]:
                 print("     " + items_iterator["CouponPolicyName"] + ":￥" + str(round(items_iterator["Amount"])))
         print("优惠券："+r["AppendData"]["CouponUsedStatus"]["Tips"]+":￥"+str(round(r["AppendData"]["CouponUsedStatus"]["Amount"])))
-        g = min(r["AppendData"]["MaxGoldCoinAmount"],goidCoin)
-        if goidCoin != 0.00:
+        g = min(r["AppendData"]["MaxGoldCoinAmount"],goidCoin,r["AppendData"]["TotalPrice"]-r["AppendData"]["CouponUsedStatus"]["Amount"])
+        if goidCoin != 0.00 and r["AppendData"]["TotalPrice"] - r["AppendData"]["CouponUsedStatus"]["Amount"] > 0:
             print("高思币：共"+str(int(goidCoin))+"个,本次使用"+str(int(g)))
         if balance != 0.00:
             print("余额：￥"+str(balance))
